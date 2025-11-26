@@ -1,17 +1,3 @@
-/* Sazgar — Premium UI Theme (Drop-in CSS)
-   Use this file instead of /css/style.css or include after it to override styles.
-   Features:
-   - Clean modern layout
-   - Strong brand emphasis (logo colors)
-   - Accessible sizes, responsive grid
-   - Hero with layered gradient + illustration slot
-   - Soft glass cards, micro-interactions
-   - Improved mobile nav + focus states
-   - Lightweight CSS only (no external libs required)
-
-   Notes: Place hero illustration in .hero-media > img and ensure images/hero-illustration.svg exists.
-*/
-
 :root {
   --primary: #0d2a4a; /* Navy */
   --secondary: #c6862a; /* Gold */
@@ -28,8 +14,6 @@
   --shadow-sm: 0 6px 18px rgba(6, 18, 38, 0.08);
   --shadow-md: 0 20px 40px rgba(6, 18, 38, 0.12);
 }
-
-/* ---- Base reset & typography ---- */
 * {
   box-sizing: border-box;
 }
@@ -55,7 +39,6 @@ a {
   color: inherit;
 }
 
-/* ---- Accessibility helpers ---- */
 .visually-hidden {
   position: absolute !important;
   height: 1px;
@@ -65,7 +48,6 @@ a {
   white-space: nowrap;
 }
 
-/* ---- Header / Nav ---- */
 .site-header {
   position: sticky;
   top: 0;
@@ -127,7 +109,6 @@ a {
   font-size: 1.2rem;
 }
 
-/* ---- Hero ---- */
 .hero {
   padding: 100px 0 60px;
   background: linear-gradient(
@@ -197,13 +178,10 @@ a {
   transform: translateY(-6px);
 }
 
-/* subtle animated shapes (optional) */
 .hero .shape {
   position: absolute;
   pointer-events: none;
 }
-
-/* ---- Services (cards grid) ---- */
 .services-preview {
   padding: 64px 0;
   background: linear-gradient(
@@ -252,7 +230,6 @@ a {
   font-weight: 700;
 }
 
-/* ---- How it works ---- */
 .how-it-works {
   padding: 48px 0;
 }
@@ -281,7 +258,6 @@ a {
   margin: 0;
 }
 
-/* ---- Testimonials ---- */
 .testimonials {
   padding: 64px 0;
 }
@@ -319,7 +295,6 @@ a {
   font-weight: 700;
 }
 
-/* ---- Contact form ---- */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 360px;
@@ -356,7 +331,6 @@ a {
   box-shadow: var(--shadow-sm);
 }
 
-/* ---- Footer ---- */
 .site-footer {
   background: var(--primary);
   color: #fff;
@@ -380,7 +354,6 @@ a {
   color: hsla(0, 0%, 100%, 0.8);
 }
 
-/* ---- Utilities ---- */
 .center {
   text-align: center;
 }
@@ -394,7 +367,6 @@ a {
   margin-bottom: 12px;
 }
 
-/* ---- Responsive ---- */
 @media (max-width: 1100px) {
   .grid-4 {
     grid-template-columns: repeat(3, 1fr);
@@ -440,8 +412,6 @@ a {
     padding: 72px 16px;
   }
 }
-
-/* ---- Focus & A11y ---- */
 a:focus,
 button:focus,
 input:focus,
@@ -450,7 +420,6 @@ textarea:focus {
   outline-offset: 3px;
 }
 
-/* ---- Micro animation (subtle) ---- */
 @keyframes floatUp {
   0% {
     transform: translateY(0);
@@ -466,7 +435,6 @@ textarea:focus {
   animation: floatUp 0.9s ease;
 }
 
-/* ---- Small helpers for embedding logo colors in icons/images ---- */
 .icon-fill-primary {
   filter: invert(16%) sepia(57%) saturate(3470%) hue-rotate(189deg)
     brightness(88%) contrast(92%);
@@ -475,5 +443,3 @@ textarea:focus {
   filter: invert(57%) sepia(24%) saturate(4918%) hue-rotate(330deg)
     brightness(93%) contrast(86%);
 }
-
-/* End of premium theme */

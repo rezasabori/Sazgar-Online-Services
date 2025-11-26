@@ -1,5 +1,4 @@
 (function () {
-  // Mobile nav toggle
   var navToggle = document.getElementById("navToggle");
   var mainNav = document.getElementById("mainNav");
   if (navToggle && mainNav) {
@@ -10,13 +9,11 @@
     });
   }
 
-  // Set current year placeholders
   for (var i = 1; i <= 8; i++) {
     var el = document.getElementById("year" + (i === 1 ? "" : i));
     if (el) el.textContent = new Date().getFullYear();
   }
 
-  // Simple contact form handling (no backend) — demonstrates validation
   var contactForm = document.getElementById("contactForm");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
@@ -30,14 +27,13 @@
         status.style.color = "crimson";
         return;
       }
-      // fake send
+
       status.textContent = "Message sent. We will contact you shortly.";
       status.style.color = "green";
       contactForm.reset();
     });
   }
 
-  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
