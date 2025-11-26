@@ -1,6 +1,6 @@
 :root {
-  --primary: #0d2a4a; /* Navy */
-  --secondary: #c6862a; /* Gold */
+  --primary: #0d2a4a;
+  --secondary: #c6862a;
   --secondary-dark: #b8721d;
   --secondary-light: #d19b3c;
   --accent-purple: #6a1b9a;
@@ -463,4 +463,104 @@ textarea:focus {
 .icon-fill-gold {
   filter: invert(57%) sepia(24%) saturate(4918%) hue-rotate(330deg)
     brightness(93%) contrast(86%);
+}
+.timebox {
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  gap: 0.45rem;
+  align-items: center;
+  justify-items: center;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.55)
+  );
+  backdrop-filter: blur(6px);
+
+  border-radius: var(--radius);
+  padding: 18px 22px;
+
+  border: 1px solid rgba(8, 24, 40, 0.06);
+  box-shadow: var(--shadow-sm);
+
+  min-width: 230px;
+  text-align: center;
+  color: var(--primary);
+
+  animation: fadeInUp 0.55s ease both;
+}
+
+.timebox.gold {
+  background: linear-gradient(
+    180deg,
+    rgba(198, 134, 42, 0.12),
+    rgba(255, 255, 255, 0.75)
+  );
+  border: 1px solid rgba(198, 134, 42, 0.15);
+}
+
+.city {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: var(--secondary);
+  text-transform: capitalize;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.time {
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--accent-purple);
+  margin-top: 8px;
+  line-height: 1;
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.time small {
+  font-size: 0.7em;
+  color: var(--secondary);
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+
+.time .colon {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .timebox {
+    padding: 14px 16px;
+    min-width: 180px;
+  }
+  .time {
+    font-size: 1.3rem;
+  }
 }

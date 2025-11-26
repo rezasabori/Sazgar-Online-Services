@@ -1,3 +1,17 @@
+function applyTime() {
+  let guessedZone = moment.tz.guess();
+  let currentMoment = moment().tz(guessedZone);
+
+  let dateElement = document.querySelector("#date");
+  let timeElement = document.querySelector("#time");
+  let cityElement = document.querySelector("#city");
+
+  dateElement.innerHTML = currentMoment.format("dddd MMMM Do, YYYY");
+  timeElement.innerHTML = currentMoment.format("h:mm:ss [<small>]A[</small>]");
+  cityElement.innerHTML = guessedZone.replace("_", " ").split("/")[1];
+}
+applyTime();
+setInterval(applyTime, 1000);
 (function () {
   var navToggle = document.getElementById("navToggle");
   var mainNav = document.getElementById("mainNav");
@@ -62,15 +76,3 @@ document.getElementById("gForm").addEventListener("submit", function (e) {
       console.log(err);
     });
 });
-
-function applyTime() {
-  let currentTime = moment.tz.guess();
-  let dateElement = document.querySelector("#date");
-  let timeElement = document.querySelector("#time");
-  let cityElement = document.querySelector("#city");
-
-  dateElement.innerHTML = currentTime.format("DDD, MMMM Do, YYYY");
-  timeElement.innerHTML = localTime.format("h:mm:ss [<small>]A[</small>]");
-}
-applyTime();
-alert("hello");
