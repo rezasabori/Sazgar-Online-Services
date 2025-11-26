@@ -26,9 +26,9 @@
             <div class="contact-form">
                 <h1>Contact Us</h1>
                 <p class="lead">Send us a message and we'll get back to you within 24–48 hours.</p>
-                <form
+                <form id="gForm"
                     action="https://docs.google.com/forms/d/e/1FAIpQLSdVZtKV-mThb3nHpMbpiUhU75c1_eMWgZZmfwQRF5LSieaLVQ/formResponse"
-                    method="POST" target="" class="contact-form">
+                    method="POST" class="contact-form">
                     <label for="name">Name *</label>
                     <input type="text" id="name" name="entry.1786167" required>
 
@@ -38,6 +38,9 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="entry.1235481548" rows="5" required></textarea>
 
+                    <div id="thankYou" style="display:none; font-size:20px; margin-top:20px; color:green;">
+                        Thank you for your message, we will get to you soon.
+                    </div>
                     <button type="submit" class="btn primary">Send Message</button>
                 </form>
                 <div id="formStatus" role="status" aria-live="polite"></div>

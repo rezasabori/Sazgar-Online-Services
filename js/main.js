@@ -33,7 +33,6 @@
       contactForm.reset();
     });
   }
-
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -42,3 +41,24 @@
     });
   });
 })();
+
+document.getElementById("gForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let form = new FormData(this);
+
+  fetch(this.action, {
+    method: "POST",
+    mode: "no-cors",
+    body: form,
+  })
+    .then(() => {
+      document.getElementById("gForm").style.display = "none";
+
+      document.getElementById("thankYou").style.display = "block";
+    })
+    .catch((err) => {
+      alert("Error submitting the form. Please try again.");
+      console.log(err);
+    });
+});
