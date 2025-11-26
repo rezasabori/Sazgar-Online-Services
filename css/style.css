@@ -365,6 +365,11 @@ a {
 .site-footer a:hover {
   color: var(--secondary);
 }
+
+footer .city {
+  font-size: 30px;
+  font-weight: bold;
+}
 .copyright {
   margin-top: 18px;
   color: hsla(0, 0%, 100%, 0.8);

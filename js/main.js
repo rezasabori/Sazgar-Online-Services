@@ -62,3 +62,15 @@ document.getElementById("gForm").addEventListener("submit", function (e) {
       console.log(err);
     });
 });
+
+function applyTime() {
+  let currentTime = moment.tz.guess();
+  let dateElement = document.querySelector("#date");
+  let timeElement = document.querySelector("#time");
+  let cityElement = document.querySelector("#city");
+
+  dateElement.innerHTML = currentTime.format("DDD, MMMM Do, YYYY");
+  timeElement.innerHTML = localTime.format("h:mm:ss [<small>]A[</small>]");
+}
+applyTime();
+alert("hello");

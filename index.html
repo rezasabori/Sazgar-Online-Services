@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.6.0/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>Sazgar Online Services — Home</title>
     <meta name="description"
         content="Sazgar Online Services — Scholarships, Visa assistance, Web Development and Global Ticket Booking.">
@@ -28,7 +31,6 @@
     <main>
 
 
-        <!-- Articles Section (2x2 Center Grid) -->
         <section class="articles" style="padding:60px 0;">
             <div class="container">
                 <h2 class="section-title center">Our Articles</h2>
@@ -38,7 +40,7 @@
                     style="max-width:850px; margin:auto; grid-template-columns:repeat(2,1fr); gap:20px;">
 
 
-                    <!-- Article 1: Visa Services -->
+
                     <article class="card">
                         <img src="images/visa-icon.png" alt="Visa Services" class="card-icon" />
                         <h3>Visa Services</h3>
@@ -47,7 +49,7 @@
                     </article>
 
 
-                    <!-- Article 2: Ticket Booking -->
+
                     <article class="card">
                         <img src="images/ticket-icon.png" alt="Ticket Booking" class="card-icon" />
                         <h3>Worldwide Ticket Booking</h3>
@@ -56,7 +58,7 @@
                     </article>
 
 
-                    <!-- Article 3: Web Development -->
+
                     <article class="card">
                         <img src="images/webdev-icon.png" alt="Web Development" class="card-icon" />
                         <h3>Web Development</h3>
@@ -65,7 +67,7 @@
                     </article>
 
 
-                    <!-- Article 4: Scholarships -->
+
                     <article class="card">
                         <img src="images/scholarship.png" alt="Scholarships" class="card-icon" />
                         <h3>Scholarships Guidance</h3>
@@ -128,6 +130,11 @@
             <div>
                 <a class="logo" href="index.html">Sazgar <span>Online Services</span></a>
                 <p>Reliable online services since March 2022.</p>
+
+                <br>
+                <div class="city" id="city"></div>
+                <div class="date" id="date"></div>
+                <div class="time" id="time"></div>
             </div>
             <div>
                 <h4>Contact</h4>
