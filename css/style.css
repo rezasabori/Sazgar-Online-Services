@@ -330,6 +330,22 @@ a {
   border-radius: 12px;
   box-shadow: var(--shadow-sm);
 }
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  font-size: 1.8rem;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #d4af37; /* Gold accent */
+  transform: scale(1.15);
+}
 
 .site-footer {
   background: var(--primary);
